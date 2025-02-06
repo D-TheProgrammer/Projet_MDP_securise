@@ -22,19 +22,54 @@ Ce projet est conçu pour être exécuté en **local** sur un environnement de d
 - **XAMPP** : utilisé comme serveur local pour PHP et MySQL
 
 ## Installation et utilisation
+
 1. **Cloner ou télécharger le dépôt** :
    - Cloner ce dépôt GitHub ou télécharger les fichiers sur votre machine
 
 2. **Configurer la base de données** :
    - Créer une base de données nommée `bdd_mdp_securise` dans **phpMyAdmin** ou votre gestionnaire MySQL
-   - Importer le fichier `bdd_mdp_securise.sql` (si nécessaire) pour initialiser la base de données
+   - Importer le fichier `bdd_mdp_securise.sql` pour initialiser la base de données
 
 3. **Lancer un serveur local** :
    - Utilisez un serveur local comme **XAMPP** ou **WAMP** pour exécuter le projet en local
    - Assurez-vous que votre serveur MySQL est bien en cours d'exécution
-   
+
+> [!TIP]
+> ### Configuration de HTTPS pour XAMPP (Environnement local)
+>
+> A. **Activer SSL dans XAMPP** :
+> - Ouvrez le fichier `httpd.conf` dans `C:/xampp/apache/conf/` et assurez-vous que la ligne suivante est décommentée :
+>     ```
+>     LoadModule ssl_module modules/mod_ssl.so
+>     ```
+> - Créez un certificat SSL auto-signé à l'aide de la commande OpenSSL ou utilisez un certificat valide.
+>     Si vous utilisez OpenSSL, voici la commande pour générer un certificat auto-signé :
+>     ```bash
+>     openssl req -x509 -newkey rsa:4096 -keyout server.key -out server.crt -days 365
+>     ```
+> - Ajoutez les lignes suivantes dans le fichier `httpd-ssl.conf` (`C:/xampp/apache/conf/extra/httpd-ssl.conf`) :
+>     ```
+>     SSLCertificateFile "C:/xampp/apache/conf/ssl.crt/server.crt"
+>     SSLCertificateKeyFile "C:/xampp/apache/conf/ssl.key/server.key"
+>     ```
+> 
+> B. **Configurer Apache pour rediriger HTTP vers HTTPS** :
+> - Ajoutez ceci dans le fichier `httpd.conf` pour rediriger automatiquement les requêtes HTTP vers HTTPS :
+>     ```
+>     <VirtualHost *:80>
+>         ServerName localhost
+>         Redirect permanent / https://localhost/
+>     </VirtualHost>
+>     ```
+> 
+> C. **Redémarrer Apache** :
+> - Redémarrez Apache dans le panneau de contrôle XAMPP pour appliquer les modifications.
+>
+> Une fois ces étapes effectuées, vous pourrez accéder à votre projet via `https://localhost/` au lieu de `http://localhost/`.
+
 4. **Accéder au projet** :
-   - Ouvrir un navigateur web et accéder à `http://localhost/nom_du_dossier` où `nom_du_dossier` est le répertoire où vous avez installé le projet
+   - Ouvrez un navigateur web et accédez à `https://localhost/nom_du_dossier` où `nom_du_dossier` est le répertoire où vous avez installé le projet.
+
 
 ## Identifiants de test
 - **Identifiant** : `master`
