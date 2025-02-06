@@ -1,4 +1,4 @@
-# TP - Formulaire d'Identification Sécurisé
+# Projet - Formulaire d'Identification Sécurisé
 
 ## Description
 Ce projet est conçu pour être exécuté en **local** sur un environnement de développement, il consiste en un formulaire d'authentification sécurisé. Il permet de tester un identifiant et un mot de passe, avec la possibilité d'ajouter un nouveau compte. Le formulaire inclut des fonctionnalités comme la réinitialisation des champs, la validation de l'utilisateur et la gestion des tentatives de connexion avec un délai après plusieurs erreurs.
