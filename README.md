@@ -65,7 +65,7 @@ Ce projet est conçu pour être exécuté en **local** sur un environnement de d
 > C. **Redémarrer Apache** :
 > - Redémarrez Apache dans le panneau de contrôle XAMPP pour appliquer les modifications.
 >
-> Une fois ces étapes effectuées, vous pourrez accéder à votre projet via `https://localhost/` au lieu de `http://localhost/`.
+> Une fois ces étapes effectuées on peut accéder au projet via `https://localhost/` au lieu de `http://localhost/`.
 
 4. **Accéder au projet** :
    - Ouvrez un navigateur web et accédez à `https://localhost/nom_du_dossier` où `nom_du_dossier` est le répertoire où vous avez installé le projet.
