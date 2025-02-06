@@ -101,3 +101,9 @@ Dans un contexte réel, il serait préférable d'utiliser un certificat valide, 
 ## Remarque
 Dans ce projet, l'utilisation de HTTPS repose sur un certificat **auto-signé** uniquement pour cet exercice. Dans un projet réel, un certificat sécurisé et valide serait nécessaire.
 Le TP est basé sur une seule page, car aucune consigne n'a été donnée pour l'ajout de plusieurs pages dans le projet.
+
+
+## Images 
+
+![image](https://github.com/user-attachments/assets/9e172ef9-5000-43a4-90b4-63299a189db4)
+
